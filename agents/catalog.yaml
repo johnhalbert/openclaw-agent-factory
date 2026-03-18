@@ -1,0 +1,11 @@
+agents:
+  docker: infra
+  home-assistant: smart-home
+  aws: infra
+  ollama: infra
+  tailscale: infra
+  debian: infra
+  ubuntu: infra
+  truenas: infra
+  plex: media
+  mealie: media
