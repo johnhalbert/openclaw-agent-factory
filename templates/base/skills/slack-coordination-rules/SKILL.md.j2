@@ -1,0 +1,31 @@
+---
+name: slack-coordination-rules
+summary: Coordinate specialist OpenClaw agents in Slack threads or channels while keeping one coherent user-facing workflow.
+---
+
+# Slack Coordination Rules
+
+## Use this when
+- The user is interacting through Slack
+- A problem spans multiple specialist domains
+- A shared thread or channel will help collect evidence from specialists
+
+## Procedure
+1. Start from the user's request in the current Slack thread or channel
+2. Decide which specialists are needed
+3. Invite or summon the relevant specialists into the same thread or a linked collaboration channel
+4. Ask each specialist for evidence-backed findings in its own domain
+5. Keep the discussion organized by domain and evidence
+6. Synthesize a final answer back to the user in the original thread
+
+## Rules
+- Keep the user's original thread as the source of truth for the final answer
+- Use specialists for evidence gathering, not for fragmented user-facing replies
+- Prefer one integrated summary over multiple disconnected updates
+- Explicitly note when specialists disagree or when evidence is incomplete
+- Keep collaboration transparent enough that a human can follow the reasoning
+
+## Suggested specialist patterns
+- Docker + Home Assistant for HA container/integration issues
+- Docker + Debian for host/container boundary issues
+- Home Assistant + Networking for MQTT, mDNS, or device discovery issues
