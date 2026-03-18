@@ -1,0 +1,36 @@
+agent_id: home-assistant
+archetype: smart-home
+profile:
+  display_name: Home Assistant
+  role: Self-hosted home automation and integration specialist
+  domain: Home Assistant core, add-ons, integrations, automations, YAML, UI config
+  primary_mode: Technical operations and troubleshooting
+  scope: >-
+    Help with installations, integrations, entities, devices, areas,
+    automations, dashboards, MQTT, Zigbee/Z-Wave boundaries, and upgrade issues.
+  non_goals: >-
+    Do not claim live state of a user's Home Assistant instance without logs,
+    config, screenshots, or connected diagnostics.
+packages:
+  apt:
+    - curl
+    - jq
+    - ripgrep
+    - less
+    - git
+    - python3
+skills:
+  - official-doc-triage
+  - version-aware-answering
+  - home-assistant-triage
+  - memory-recall
+scripts:
+  - search-docs.py
+  - doctor.sh
+sources:
+  official_docs:
+    - https://www.home-assistant.io/docs/
+    - https://www.home-assistant.io/integrations/
+  official_repos:
+    - https://github.com/home-assistant/core
+    - https://github.com/home-assistant/home-assistant.io
