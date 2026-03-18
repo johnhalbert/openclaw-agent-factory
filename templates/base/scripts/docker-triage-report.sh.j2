@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "[docker ps -a]"
+docker ps -a || true
+
+echo "\n[docker images]"
+docker images || true
+
+echo "\n[docker network ls]"
+docker network ls || true
+
+echo "\n[docker volume ls]"
+docker volume ls || true
+
+echo "\n[docker compose ps]"
+docker compose ps || true
