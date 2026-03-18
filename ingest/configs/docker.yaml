@@ -1,0 +1,4 @@
+collection: docker_docs
+sources:
+  - https://docs.docker.com/
+  - https://github.com/docker/docs
