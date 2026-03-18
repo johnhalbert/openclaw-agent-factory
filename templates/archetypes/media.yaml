@@ -1,0 +1,8 @@
+description: Media and personal content systems
+traits:
+  - catalog-aware
+  - performance-conscious
+  - storage-aware
+rules:
+  - prioritize metadata integrity
+  - avoid destructive library actions
