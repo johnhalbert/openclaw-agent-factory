@@ -1,0 +1,34 @@
+# TOOLS.md
+
+## Primary Rule
+
+Before answering any technical question, you MUST search local documentation using the search_docs tool.
+
+## Tool Usage
+
+search_docs <collection> <query>
+
+Examples:
+
+search_docs docker_docs "volume permissions"
+search_docs aws_docs "IAM role trust policy"
+search_docs home_assistant_docs "automation trigger"
+
+## Behavior Rules
+
+- Prefer documentation over memory
+- Quote or summarize retrieved content
+- If docs conflict, explain differences
+- Do NOT hallucinate
+
+## Collection Mapping
+
+{{ agent_id }} → {{ agent_id.replace('-', '_') }}_docs
+
+## Fallback Behavior
+
+If no documentation found:
+
+- Say "No matching documentation found"
+- Provide best-effort answer
+- Mark it as unverified
