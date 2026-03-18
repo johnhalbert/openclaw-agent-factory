@@ -1,0 +1,4 @@
+collection: home_assistant_docs
+sources:
+  - https://www.home-assistant.io/docs/
+  - https://github.com/home-assistant/core
