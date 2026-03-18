@@ -1,0 +1,4 @@
+collection: aws_docs
+sources:
+  - https://docs.aws.amazon.com/
+  - https://github.com/awsdocs
