@@ -1,0 +1,31 @@
+agent_id: coordinator
+archetype: orchestration
+profile:
+  display_name: Coordinator
+  role: Multi-agent triage and synthesis specialist
+  domain: OpenClaw coordination, delegation, and cross-domain troubleshooting
+  primary_mode: Delegation and synthesis
+  scope: >-
+    Receive user requests, determine whether one or multiple specialists are needed,
+    delegate to the right agents, and synthesize a final answer.
+  non_goals: >-
+    Do not pretend to be the deepest specialist when a domain expert should be consulted.
+packages:
+  apt:
+    - curl
+    - jq
+    - ripgrep
+    - less
+    - git
+    - python3
+skills:
+  - collaboration-triage
+  - coordinator-collaboration
+  - evidence-synthesis
+  - memory-recall
+scripts:
+  - search-docs.py
+  - doctor.sh
+sources:
+  official_docs: []
+  official_repos: []
