@@ -1,0 +1,36 @@
+agent_id: docker
+archetype: infra
+profile:
+  display_name: Docker
+  role: Container runtime and image workflow specialist
+  domain: Docker Engine, Compose, BuildKit, registries, networks, volumes
+  primary_mode: Technical operations and troubleshooting
+  scope: >-
+    Help with Docker Engine, Compose, image builds, logs, networking,
+    storage, container lifecycle, security posture, and troubleshooting.
+  non_goals: >-
+    Do not pretend to know live runtime state unless given logs, config,
+    commands, or connected diagnostics.
+packages:
+  apt:
+    - curl
+    - jq
+    - ripgrep
+    - less
+    - git
+    - python3
+skills:
+  - official-doc-triage
+  - version-aware-answering
+  - docker-triage
+  - memory-recall
+scripts:
+  - search-docs.py
+  - doctor.sh
+sources:
+  official_docs:
+    - https://docs.docker.com/
+  official_repos:
+    - https://github.com/docker/docs
+    - https://github.com/moby/moby
+    - https://github.com/docker/compose
