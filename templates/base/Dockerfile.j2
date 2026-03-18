@@ -1,0 +1,12 @@
+FROM openclaw-sandbox:bookworm-slim
+
+USER root
+
+RUN useradd -m -s /bin/bash sandbox \
+ && mkdir -p /workspace /opt/agent/bin /opt/agent/data /opt/agent/chroma \
+ && chown -R sandbox:sandbox /workspace /opt/agent
+
+WORKDIR /workspace
+USER sandbox
+
+ENV PATH="/opt/agent/bin:${PATH}"
