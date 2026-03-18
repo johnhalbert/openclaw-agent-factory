@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CONFIG_DIR="${1:-.}"
+
+echo "Home Assistant config audit for: ${CONFIG_DIR}"
+
+if [[ -f "${CONFIG_DIR}/configuration.yaml" ]]; then
+  echo "\n[configuration.yaml found]"
+else
+  echo "\n[configuration.yaml missing]"
+fi
+
+if command -v rg >/dev/null 2>&1; then
+  echo "\n[automation references]"
+  rg -n "automation:|trigger:|condition:|action:" "${CONFIG_DIR}" || true
+
+  echo "\n[mqtt references]"
+  rg -n "mqtt:|broker:|topic:" "${CONFIG_DIR}" || true
+
+  echo "\n[integration references]"
+  rg -n "^\s*- platform:|integration:" "${CONFIG_DIR}" || true
+else
+  echo "ripgrep (rg) not found; cannot perform deeper audit"
+fi
