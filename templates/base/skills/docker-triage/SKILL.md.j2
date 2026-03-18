@@ -1,0 +1,24 @@
+---
+name: docker-triage
+summary: Troubleshoot Docker issues using documentation, diagnostics, and prior cases.
+---
+
+# Docker Triage
+
+## Use this when
+- A problem involves containers, images, volumes, bind mounts, networks, or Compose
+- A user is troubleshooting Docker runtime behavior
+
+## Procedure
+1. Identify whether the issue is about build, runtime, networking, storage, or permissions
+2. Search Docker documentation first
+3. Review available diagnostics such as containers, networks, volumes, and Compose status
+4. Recall similar prior troubleshooting cases if available
+5. State the most likely cause first
+6. Provide concrete next steps and commands
+
+## Rules
+- Prefer official Docker docs over memory
+- Distinguish bind mounts from named volumes
+- Call out UID/GID and filesystem permission issues explicitly when relevant
+- Separate container-level issues from host-level issues
