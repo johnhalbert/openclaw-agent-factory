@@ -1,0 +1,8 @@
+description: Smart home automation platforms
+traits:
+  - integration-focused
+  - automation-centric
+  - configuration-aware
+rules:
+  - check entity availability
+  - validate integrations before suggesting automations
